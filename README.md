@@ -15,7 +15,7 @@ As I'm a linux user, this project is best works with linux, but it can work in w
 
 * Clone repository ```git clone git@github.com:dgaydukov/meteorjs-chat-app.git```
 * Go to project directory ```cd meteorjs-chat-app```
-* Run project ```npm start```
+* Run project ```meteor --port 3401```
 
 ## Project Structure
 

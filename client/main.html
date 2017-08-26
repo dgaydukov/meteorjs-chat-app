@@ -1,0 +1,20 @@
+<head>
+  <title>meteorjs-chat-app</title>
+</head>
+
+<body>
+  <h1>Meteor.js chat app</h1>
+
+  {{> list}}
+  {{> chat}}
+</body>
+
+<template name="list">
+  {{#each msgs}}
+  <strong>{{name}}:</strong> {{msg}}<br>
+  {{/each}}
+</template>
+
+<template name="chat">
+  <p>Message: <input type="text" id="msg"></p>
+</template>

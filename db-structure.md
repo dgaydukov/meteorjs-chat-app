@@ -16,41 +16,39 @@ We have the following list of entities
 * Invites (users can send invites to other users, and to new ones)
 
 ## Db Schema
+We need 4 tables for out project
 
-`
-users
+1) users
+```
 user_id
 fullName
 nickName
 password
-`
-
-`
-chats
+```
+2) chats
+```
 chat_id
 created_datetime
 type (public/private)
 name
-`
-
-`
-history
+```
+3) history
+```
 history_id
 datetime
 message
 reply_to_id
 chat_id
 user_id
-`
-
-`
-invites
+```
+4)invites
+```
 invite_id
 code
 status (new/completed)
 user_id_from
 user_id_to
 email_to
-`
+```
 
 Chats and Users related by many-to-many relation. So they need an intermediate table to store their relation data.

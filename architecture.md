@@ -13,8 +13,10 @@ If you are in doubt what to use, read this [answer](https://stackoverflow.com/qu
 on stackOverflow for more details.
 
 
-## Ready examples
-You can read [article](https://www.codementor.io/codeforgeek/getting-started-with-meteor-build-sample-app-du107r3o2) how to build chats with meteor.js
+## Knowledge of Meteor.js
+* If you are complete new to meteor.js, please read this [article](https://www.meteor.com/tutorials/blaze/creating-an-app) for better understanding of meteor envioronment
+* If you are interested about meteor internals please read [this](https://blog.meteor.com/introducing-ddp-6b40c6aff27d)
+* If you are doubt should you use meteor or MEAN stack, read [this](https://forums.meteor.com/t/why-i-won-t-recommend-meteor-anymore/5285) forum entry
 
 
 ## Move to React

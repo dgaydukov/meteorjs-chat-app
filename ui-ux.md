@@ -20,7 +20,7 @@ So basically we need 2 blocks on a page:
 * Window with popular chats, with following functions
 1) search public chats
 2) search users
-3) create new chat (both public and private)
+3) create new chat (private only for authed users)
 * Chat window
 
 If you are anonymous you will see only popular chats.

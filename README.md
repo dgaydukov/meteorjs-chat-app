@@ -25,9 +25,9 @@ app
 
 ## Project Details
 
-Please read [User Experience](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/ui-ux.md) for more details
-Please read [Database Structure](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/db-structure.md) for more details
-Please read [Project Architecture](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/architecture.md) for more details
+* Please read [User Experience](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/ui-ux.md) for more details
+* Please read [Database Structure](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/db-structure.md) for more details
+* Please read [Project Architecture](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/architecture.md) for more details
 
 
 ## Built With

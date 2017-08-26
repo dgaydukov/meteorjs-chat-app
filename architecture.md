@@ -8,7 +8,13 @@ Basically there are 2 ways of communication
 * WebSockets (constant connections)
 * ShortPolling (execute ajax requests every sec.)
 Both have pros and cons, but for chat system sockets are more better solution, because you need server pushing.
-Yet there are many options, and one of them is imitate websotckets by using SSE (server-sent events) + ShortPolling
+Yet there are many options, and one of them is imitate websotckets by using SSE (server-sent events) + ShortPolling.
+If you are in doubt what to use, read this [answer](https://stackoverflow.com/questions/10028770/in-what-situations-would-ajax-long-short-polling-be-preferred-over-html5-websock)
+on stackOverflow for more details.
+
+
+## Ready examples
+You can read [article](https://www.codementor.io/codeforgeek/getting-started-with-meteor-build-sample-app-du107r3o2) how to build chats with meteor.js
 
 
 ## Move to React

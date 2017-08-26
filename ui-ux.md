@@ -15,6 +15,8 @@ In order to avoid this you need to login/register, so the system will remember y
 
 ## Interface
 
+When we build interface telegram come to mind.
+So basically we need 2 blocks on a page:
 * Window with popular chats, with following functions
 1) search public chats
 2) search users

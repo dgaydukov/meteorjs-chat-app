@@ -1,40 +1,56 @@
-# Chat App with Meter.js
+# Database Structure
 
-The purpose of this project is to create a simple chat app using meteor js as frontend and backend technology.
+Every mid to serious backend project starts from db desing and planning. What will your database structure, what entities will it have and so on.
+This document describes main entities of the project and their relation
 
-## Getting Started
+## The db question
 
-In order to start, you should clone this repo. This project needs node.js, so you have to install npm.
+What kind of db we should use. Relational or Document. MongoDb vs Postgres.
+For these project MongoDb will be enough.
 
-### Prerequisites
+## Entities
 
-As I'm a linux user, this project is best works with linux, but it can work in windows evniroment too.
+We have the following list of entities
+* Users (all users who use chat app)
+* Chats (history of all chats)
+* Invites (users can send invites to other users, and to new ones)
 
+## Db Schema
 
-### Installing
+`
+users
+user_id
+fullName
+nickName
+password
+`
 
-* Clone repository ```git clone git@github.com:dgaydukov/meteorjs-chat-app.git```
-* Go to project directory ```cd meteorjs-chat-app```
-* Run project ```npm start```
+`
+chats
+chat_id
+created_datetime
+type (public/private)
+name
+`
 
-## Project Structure
+`
+history
+history_id
+datetime
+message
+reply_to_id
+chat_id
+user_id
+`
 
-```
-app
-```
+`
+invites
+invite_id
+code
+status (new/completed)
+user_id_from
+user_id_to
+email_to
+`
 
-## Project Details
-
-Please read [Project Architecture](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-Please read [DB Structure](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-Please read [User scenario](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-
-
-## Built With
-
-* [Node v7.0](https://nodejs.org/en/blog/release/v7.0.0) - The web framework
-
-
-## Authors
-
-* **Gaydukov Dmitiry** - *Take a look* - [How to become a Senior Javascript Developer](https://github.com/dgaydukov/how-to-become-a-senior-js-developer)
+Chats and Users related by many-to-many relation. So they need an intermediate table to store their relation data.

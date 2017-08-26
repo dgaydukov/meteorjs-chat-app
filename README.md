@@ -1,4 +1,4 @@
-# Chat App with Meter.js
+# Chat App with Meteor.js
 
 The purpose of this project is to create a simple chat app using meteor js as frontend and backend technology.
 
@@ -25,14 +25,20 @@ app
 
 ## Project Details
 
-Please read [Project Architecture](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-Please read [DB Structure](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-Please read [User scenario](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
+Please read [User Experience](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/ui-ux.md) for more details
+Please read [Database Structure](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/db-structure.md) for more details
+Please read [Project Architecture](https://github.com/dgaydukov/meteorjs-chat-app/blob/master/architecture.md) for more details
 
 
 ## Built With
 
 * [Node v7.0](https://nodejs.org/en/blog/release/v7.0.0) - The web framework
+* [Meteor.js](https://www.meteor.com) - backend & frontend framework
+* [Mongo]https://www.mongodb.com) - database storage engine
+* [Meteor.js](https://www.meteor.com) - backend & frontend framework
+* [React 15.0](https://facebook.github.io/react/blog/2016/04/07/react-v15.html) - Frontend web framework (i will show how to move from meteor.js to react)
+
+
 
 
 ## Authors

@@ -1,40 +1,33 @@
-# Chat App with Meter.js
+# User Experience
 
-The purpose of this project is to create a simple chat app using meteor js as frontend and backend technology.
+Every project start from ui-ux. Busyness sets requirements for ux, and based on that, developers create db and project architecture.
+So in order to better understand db structure and project we need to start fro ux.
 
-## Getting Started
+## User Scenarios
 
-In order to start, you should clone this repo. This project needs node.js, so you have to install npm.
+Basically we have 2 user scenarios
+* Anonymous user
+* Authenticated user
 
-### Prerequisites
+The main difference between them, is that when you are anonymous your session (chats, friends) is limited to your browser. So if you close your browser, or restart your pc, you will
+lose all your history. The same goes, if you enter from another pc. You will start from scratch.
+In order to avoid this you need to login/register, so the system will remember you.
 
-As I'm a linux user, this project is best works with linux, but it can work in windows evniroment too.
+## Interface
 
+* Window with popular chats, with following functions
+1) search public chats
+2) search users
+3) create new chat (both public and private)
+* Chat window
 
-### Installing
+If you are anonymous you will see only popular chats.
+If you are authenticated you will see your public & private chats, and also your friends
 
-* Clone repository ```git clone git@github.com:dgaydukov/meteorjs-chat-app.git```
-* Go to project directory ```cd meteorjs-chat-app```
-* Run project ```npm start```
+### User actions
 
-## Project Structure
-
-```
-app
-```
-
-## Project Details
-
-Please read [Project Architecture](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-Please read [DB Structure](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-Please read [User scenario](https://github.com/dgaydukov/nodejs-blockchain/blob/master/mining-farm.md) for more details
-
-
-## Built With
-
-* [Node v7.0](https://nodejs.org/en/blog/release/v7.0.0) - The web framework
-
-
-## Authors
-
-* **Gaydukov Dmitiry** - *Take a look* - [How to become a Senior Javascript Developer](https://github.com/dgaydukov/how-to-become-a-senior-js-developer)
+Users can do the following things
+* Create new chats
+* Invite new people (both existed users, and new one by the invite fucntionality)
+* Search users & public chats
+* Generate invite links

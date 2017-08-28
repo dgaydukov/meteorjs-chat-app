@@ -3,19 +3,35 @@
 </head>
 
 <body>
-  <h1>Meteor.js chat app</h1>
-
-  {{> list}}
-  {{> chat}}
+  <div class="layout">
+    <header><h1>Meteor.js chat app</h1></header>
+    <id class="content">
+      <div class="aside">
+        <div>{{> loginButtons}}</div>
+        {{> userList}}
+      </div>
+      <div class="main">
+        {{> chatWindow}}
+        {{> userInput}}
+      </div>
+    </id>
+    <footer></footer>
+  </div>
 </body>
 
-<template name="list">
-  {{#each history}}
-  <strong>{{name}}:</strong> {{msg}}<br>
-  {{/each}}
+<template name="userList">
+  userlist
 </template>
 
-<template name="chat">
-  <p>Message: <input type="text" id="msg"></p>
-  <div><button type="button" id="send">send</button></div>
+<template name="chatWindow">
+  <div class="chat-window" id="chatWindow">
+    {{#each history}}
+    <strong>{{name}}:</strong> {{msg}}<br>
+    {{/each}}
+  </div>
+</template>
+
+<template name="userInput">
+  <p>Type your message: <br/><textarea type="text" id="msg"></textarea></p>
+  <div><button type="button" id="send">Send message</button></div>
 </template>

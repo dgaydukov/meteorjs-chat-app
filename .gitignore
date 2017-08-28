@@ -1,3 +1,5 @@
 .idea
 .meteor
+package-lock.json
+npm-debug.log
 node_modules/

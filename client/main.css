@@ -1,1 +1,25 @@
 /* CSS declarations go here */
+
+
+.content{
+    width: 1024px;
+}
+.aside{
+    float: left;
+    width: 300px;
+}
+.main{
+    float: left;
+    margin-left: 24px;
+}
+.chat-window{
+    height: 300px;
+    width: 400px;
+    overflow-y: scroll;
+}
+
+
+textarea#msg{
+    width: 400px;
+    height: 100px;
+}

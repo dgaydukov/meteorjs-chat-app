@@ -1,45 +1,45 @@
 import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-
-const ENTER_KEY_EVENT_NUMBER = 13;
-
+import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
+import {History} from '../imports/collections';
 import './main.html';
 
-Meteor.subscribe('history');
-var History = new Meteor.Collection('history');
+const ANONYMOUS_USER = "ANONYMOUS_USER";
+const ANONYMOUS_USERNAME = "ANONYMOUS_USERNAME";
 
-Template.list.helpers({
-  history: function() {
-    return History.find({}, { sort: { time: -1}});
-  }
+if(!Meteor.userId() && !localStorage.getItem(ANONYMOUS_USER)){
+  localStorage.setItem(ANONYMOUS_USER, true);
+  localStorage.setItem(ANONYMOUS_USERNAME, "Anonymous-"+new Date().getUTCMilliseconds());
+}
+
+Accounts.ui.config({
+  passwordSignupFields: 'USERNAME_ONLY',
 });
 
-Template.chat.events = {
-  'keydown input#msg' : function (event) {
-    if (event.which == ENTER_KEY_EVENT_NUMBER) {
-      sendMessage();
-    }
+Meteor.subscribe('history');
+
+
+Template.chatWindow.helpers({
+  history: function() {
+    return History.find();
   }
-}
-Template.chat.events = {
+});
+Template.userInput.events = {
   'click button#send' : function (event) {
     sendMessage();
   }
 }
 
 function sendMessage(){
-  if (Meteor.user)
-    var name = Meteor.user().profile.name;
-  else
-    var name = 'Anonymous';
   var msg = document.getElementById('msg');
   if (msg.value != '') {
     History.insert({
-      name: name,
+      name: Meteor.user() ? Meteor.user().username : localStorage.getItem(ANONYMOUS_USERNAME),
       msg: msg.value,
       time: Date.now(),
     });
     document.getElementById('msg').value = '';
     msg.value = '';
+    document.getElementById("chatWindow").scrollTop = document.getElementById("chatWindow").scrollHeight;
   }
 }

@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
+import {History} from '../imports/collections';
 
 Meteor.startup(() => {
-    var History = new Meteor.Collection('history');
-    Meteor.publish('history', function historyPublication() {
+    Meteor.publish('history', function () {
         return History.find();
     });
 });

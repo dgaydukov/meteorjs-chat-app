@@ -17,6 +17,7 @@ on stackOverflow for more details.
 * If you are complete new to meteor.js, please read this [article](https://www.meteor.com/tutorials/blaze/creating-an-app) for better understanding of meteor envioronment
 * If you are interested about meteor internals please read [this](https://blog.meteor.com/introducing-ddp-6b40c6aff27d)
 * If you are doubt should you use meteor or MEAN stack, read [this](https://forums.meteor.com/t/why-i-won-t-recommend-meteor-anymore/5285) forum entry
+* Great [article](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md) about ddp protocol
 
 
 ## Move to React

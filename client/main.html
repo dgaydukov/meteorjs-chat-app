@@ -10,11 +10,12 @@
 </body>
 
 <template name="list">
-  {{#each msgs}}
+  {{#each history}}
   <strong>{{name}}:</strong> {{msg}}<br>
   {{/each}}
 </template>
 
 <template name="chat">
   <p>Message: <input type="text" id="msg"></p>
+  <div><button type="button" id="send">send</button></div>
 </template>

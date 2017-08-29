@@ -27,17 +27,28 @@
 <template name="chatList">
   <h3>chat list</h3>
   <div id="chatList">
-    {{#each chats}}
-    <div data-id="{{_id}}" class="chat-item">{{name}}-{{type}}-{{date}}</div>
-    {{/each}}
+    <table class="table table-condensed">
+      <tr>
+        <th>name</th>
+        <th>type</th>
+        <th>date</th>
+      </tr>
+      {{#each chats}}
+      <tr>
+        <td><div data-id="{{_id}}" class="chat-item">{{name}}</div></td>
+        <td>{{type}}</td>
+        <td>{{date}}</td>
+      </tr>
+      {{/each}}
+    </table>
   </div>
   <div>
-    <p><input type="text" id="name"/></p>
-    <p>
-      <label><input type="radio" name="chat-type" value="public" checked="checked"/>Public</label>
-      <label><input type="radio" name="chat-type" value="private" id="radioBtnPrivateChat" disabled/>Private</label>
+    <p><input type="text" class="form-control" placeholder="Enter chat name" id="name"/></p>
+    <p class="radio">
+      <label class="radio-inline"><input type="radio" name="chat-type" value="public" checked="checked"/>Public</label>
+      <label class="radio-inline"><input type="radio" name="chat-type" value="private" id="radioBtnPrivateChat" disabled/>Private</label>
     </p>
-    <p><button id="add">add chat</button></p>
+    <p><button id="add" class="btn btn-success">Add</button></p>
   </div>
 </template>
 
@@ -51,5 +62,5 @@
 
 <template name="userInput">
   <p>Type your message: <br/><textarea type="text" id="msg"></textarea></p>
-  <div><button id="send">Send message</button></div>
+  <div><button class="btn btn-success" id="send">Send message</button></div>
 </template>

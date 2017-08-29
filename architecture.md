@@ -24,6 +24,7 @@ on stackOverflow for more details.
 * Search users (only for authed)
 * Add users to peer-to-peer chat (only for authed)
 * Invite users to private chats
+* Divide clients main.js file into multiple modules based on logic
 
 ## Move to React
 

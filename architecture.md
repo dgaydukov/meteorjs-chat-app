@@ -19,6 +19,11 @@ on stackOverflow for more details.
 * If you are doubt should you use meteor or MEAN stack, read [this](https://forums.meteor.com/t/why-i-won-t-recommend-meteor-anymore/5285) forum entry
 * Great [article](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md) about ddp protocol
 
+## A room for improvement
+* Server collection reactive push (so clear chat window, when select new chat)
+* Search users (only for authed)
+* Add users to peer-to-peer chat (only for authed)
+* Invite users to private chats
 
 ## Move to React
 

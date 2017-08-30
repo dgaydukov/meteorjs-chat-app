@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import {History, Chats} from '../imports/collections';
-import {formatIsoDate} from './helpers';
+import {formatIsoDate, guid} from './helpers';
 import './main.html';
 
 const ANONYMOUS_USER = "ANONYMOUS_USER";
@@ -20,7 +20,7 @@ if user is not logged, make him anonymous
  */
 if(!Meteor.userId() && !localStorage.getItem(ANONYMOUS_USER)){
   localStorage.setItem(ANONYMOUS_USER, true);
-  localStorage.setItem(ANONYMOUS_USERNAME, "Anonymous-"+new Date().getUTCMilliseconds());
+  localStorage.setItem(ANONYMOUS_USERNAME, guid());
 }
 
 

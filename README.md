@@ -13,9 +13,13 @@ As I'm a linux user, this project is best works with linux, but it can work in w
 
 ### Installing
 
-* Clone repository ```git clone git@github.com:dgaydukov/meteorjs-chat-app.git```
-* Go to project directory ```cd meteorjs-chat-app```
-* Run project ```npm start```
+```
+git clone git@github.com:dgaydukov/meteorjs-chat-app.git
+cd meteorjs-chat-app
+meteor create .
+meteor add accounts-ui accounts-password twbs:bootstrap
+npm start
+```
 
 ## Project Structure
 

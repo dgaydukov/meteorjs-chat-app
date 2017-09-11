@@ -20,10 +20,11 @@ on stackOverflow for more details.
 * Great [article](https://github.com/meteor/meteor/blob/devel/packages/ddp/DDP.md) about ddp protocol
 
 ## A room for improvement
+* My chats (only for authed)
 * Search users (only for authed)
 * Add users to peer-to-peer chat (only for authed)
-* Invite users to private chats
-* Divide clients main.js file into multiple modules based on logic
+* Add users to private chats (only for authed)
+* Divide clients main.js & main.html file into multiple modules based on logic
 
 ## Move to React
 

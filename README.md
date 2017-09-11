@@ -26,7 +26,9 @@ npm start
 ## Project Structure
 
 ```
-app
+client #js that executes on frontend
+server #js that execute on backend
+imports #js functions shared by both backend & frontend
 ```
 
 ## Project Details
@@ -38,11 +40,8 @@ app
 
 ## Built With
 
-* [Node v7.0](https://nodejs.org/en/blog/release/v7.0.0) - The web framework
 * [Meteor.js](https://www.meteor.com) - backend & frontend framework
-* [Mongo](https://www.mongodb.com) - database storage engine
-* [Meteor.js](https://www.meteor.com) - backend & frontend framework
-* [React 15.0](https://facebook.github.io/react/blog/2016/04/07/react-v15.html) - Frontend web framework (i will show how to move from meteor.js to react)
+* Meteor.js use [node.js](https://nodejs.org/en/blog/release/v7.0.0) as server, and [mongo.db](https://www.mongodb.com) as database engine
 
 
 

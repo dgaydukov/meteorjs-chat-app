@@ -1,18 +1,20 @@
 # Database Structure
 
-Every mid to serious backend project starts from db desing and planning. What will your database structure, what entities will it have and so on.
-This document describes main entities of the project and their relation
+Every mid to large backend project starts from db design. Before you start you should answer following questions
+* What kind of database to use: Relational(Mysql, Postgres) or Document(Mongo)
+* What will be your database structure
+* What entities will it have and so on.
 
 ## The db question
 
-What kind of db we should use. Relational or Document. MongoDb vs Postgres.
-For these project MongoDb will be enough.
+Because of Mongo is already inside meteor, we will use default database.
 
 ## Entities
 
 We have the following list of entities
 * Users (all users who use chat app)
 * Chats (history of all chats)
+* History (message list)
 * Invites (users can send invites to other users, and to new ones)
 
 ## Db Schema
@@ -51,4 +53,4 @@ user_id_to
 email_to
 ```
 
-Chats and Users related by many-to-many relation. So they need an intermediate table to store their relation data.
+Chats and Users related by many-to-many relation, through the history table.

@@ -37,7 +37,7 @@
       <tr>
         <td><div data-id="{{_id}}" class="chat-item">{{name}}</div></td>
         <td>{{type}}</td>
-        <td>{{date}}</td>
+        <td>{{formatIsoDate(date)}}</td>
       </tr>
       {{/each}}
     </table>
@@ -46,7 +46,7 @@
     <p><input type="text" class="form-control" placeholder="Enter chat name" id="name"/></p>
     <p class="radio">
       <label class="radio-inline"><input type="radio" name="chat-type" value="public" checked="checked"/>Public</label>
-      <label class="radio-inline"><input type="radio" name="chat-type" value="private" id="radioBtnPrivateChat" disabled/>Private</label>
+      <label class="radio-inline"><input type="radio" name="chat-type" value="private" {{disable}}/>Private</label>
     </p>
     <p><button id="add" class="btn btn-success">Add</button></p>
   </div>

@@ -19,6 +19,7 @@ Meteor.startup(() => {
     //Chats.remove({});
 
     Meteor.publish('history', function (chatName) {
+        console.log(chatName);
         const chat = getChatByName(chatName) || getChatByName(DEFAULT_CHAT_NAME);
         return History.find({chatId: chat._id});
     });

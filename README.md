@@ -49,3 +49,22 @@ imports #js functions shared by both backend & frontend
 ## Authors
 
 * **Gaydukov Dmitiry** - *Take a look* - [How to become a Senior Javascript Developer](https://github.com/dgaydukov/how-to-become-a-senior-js-developer)
+
+
+### Some thoughts about meteor
+
+Where to use. Meteor is really cool feature for start-ups. Whenever you need to set-up an MVP, meteor is the best choice.
+Also all kinds of adminpanels also a use-case.
+Where not to use it
+* If you already have mongo.db database (it will be very difficult to befriend existing mongo.db to meteor )
+* If you are planning to grows and build many microservices. Suppose you want a microservice in node.js that need to comunicate direct with your meteor mongo.db (it will be a headace)
+The point is, that every framework has it own limits. And meteor is good when you need to build something fast. But when your project starts to grow, you start to feel this limitation, so
+it's better to thought in advance.
+
+
+
+
+
+
+
+

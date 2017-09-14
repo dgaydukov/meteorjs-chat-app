@@ -6,7 +6,7 @@ import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import {History, Chats} from '../imports/collections';
-import {formatIsoDate, generateNickName} from './helpers';
+import {formatIsoDate, generateNickName, scrollChat} from './helpers';
 import './main.html';
 const ANONYMOUS_USER = "ANONYMOUS_USER";
 const ANONYMOUS_USERNAME = "ANONYMOUS_USERNAME";
@@ -32,9 +32,7 @@ Accounts.ui.config({
 
 Meteor.subscribe('chats');
 Tracker.autorun(function () {
-  Meteor.subscribe('history', Session.get("chatName"), function () {
-    document.getElementById("chatWindow").scrollTop = document.getElementById("chatWindow").scrollHeight
-  });
+  Meteor.subscribe('history', Session.get("chatName"), scrollChat);
 })
 
 
@@ -89,7 +87,8 @@ Template.userInput.events = {
         chatId: Chats.find({name: Session.get("chatName")}).fetch()[0]._id,
       });
       msg.value = '';
-      document.getElementById("chatWindow").scrollTop = document.getElementById("chatWindow").scrollHeight;
+      scrollChat();
     }
   }
 }
+
